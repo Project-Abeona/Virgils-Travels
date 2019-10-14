@@ -1,0 +1,20 @@
+#landing{
+    background-color: #22b5ef;
+    background-image: url(../images/Stock5.jpg);
+    position: relative;
+    background-position: 50% 50%;
+    color: white;
+    padding: 2em 0 2em 0;
+    min-height: 50em;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.bg-dark{
+    background: #131313 !important;
+}
+
+.nav-link{
+    color: white !important;
+}

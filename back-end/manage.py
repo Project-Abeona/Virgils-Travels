@@ -1,51 +1,78 @@
-from flask import Flask, render_template, flash, \
-redirect, url_for, request, logging
-from wtforms import Form, StringField, TextAreaField, validators
+from flask import Flask, jsonify, request, json
 from flask_mysqldb import MySQL
-import json
+from datetime import datetime
+from flask_cors import CORS
+from flask_bcrypt import Bcrypt
+from flask_jwt_extended import JWTManager
+from flask_jwt_extended import (create_access_token)
 
-app = Flask (__name__)
+app = Flask(__name__)
 
-# Config MySQL
 app.config['MYSQL_HOST'] = '34.83.51.125'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '#CECS445Staging'
-app.config['MYSQL_DB'] = 'cecs445stagingdb'
+app.config['MYSQL_DB'] = 'cecs445staging'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+app.config['JWT_SECRET_KEY'] = 'secret'
 
-# TODO Update secret key
-app.secret_key = '3sWtqox1OC9M92ivZz4ATWi7MJ74VPf9UGW_yOIzDGI'
-
-# init MYSQL
 mysql = MySQL(app)
+bcrypt = Bcrypt(app)
+jwt = JWTManager(app)
 
-@app.route('/')
-def index():
-    return json.dumps({
-        'message': 'home',
-        'code': 200
-    })
+CORS(app)
 
-@app.route('/persons')
-def persons():
-    return json.dumps({
-        'code': 200,
-        'XxBryanxX': {
-            'first_name': 'Bryan',
-            'last_name': 'Rojas',
-            'email': 'BryanRojasCS@gmail.com'
-        },
-        'Hector123': {
-            'first_name': 'Hector',
-            'last_name': 'Mendoza',
-            'email': 'HM123@gmail.com'
-        },
-        'Fake': {
-            'first_name': 'Fake',
-            'last_name': 'Name',
-            'email': 'FakeName@gmail.com'
-        }
-    })
+@app.route('/users/register', methods=['POST'])
+def register():
+    cur = mysql.connection.cursor()
+    first_name = request.get_json()['first_name']
+    last_name = request.get_json()['last_name']
+    email = request.get_json()['email']
+    password = bcrypt.generate_password_hash(request.get_json()['password']).decode('utf-8')
+    created = datetime.utcnow()
+	
+    cur.execute("INSERT INTO users (first_name, last_name, email, password, created) VALUES ('" + 
+		str(first_name) + "', '" + 
+		str(last_name) + "', '" + 
+		str(email) + "', '" + 
+		str(password) + "', '" + 
+		str(created) + "')")
+    mysql.connection.commit()
+	
+    result = {
+		'first_name' : first_name,
+		'last_name' : last_name,
+		'email' : email,
+		'password' : password,
+		'created' : created
+	}
 
+    return jsonify({'result' : result})
+	
+
+@app.route('/users/login', methods=['POST'])
+def login():
+    cur = mysql.connection.cursor()
+    email = request.get_json()['email']
+    password = request.get_json()['password']
+    result = ""
+	
+    cur.execute("SELECT * FROM users where email = '" + str(email) + "'")
+    rv = cur.fetchone()
+	
+    if bcrypt.check_password_hash(rv['password'], password):
+        access_token = create_access_token(identity = {'first_name': rv['first_name'],'last_name': rv['last_name'],'email': rv['email']})
+        result = access_token
+    else:
+        result = jsonify({"error":"Invalid username and password"})
+    
+    return result
+
+@app.route('/users/all', methods=['GET'])
+def getUsers():
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM users")
+    rv = cur.fetchall()
+    return jsonify(rv)
+	
 if __name__ == '__main__':
     app.run(debug=True)
