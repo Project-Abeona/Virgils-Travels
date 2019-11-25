@@ -25,7 +25,8 @@ class Profile extends Component {
   render() {
     return (
       <div className="container">
-        <div className="jumbotron mt-5">
+       <br/>
+       <br/>
           <div className="col-sm-8 mx-auto">
             <h1 className="text-center">PROFILE</h1>
           </div>
@@ -45,7 +46,7 @@ class Profile extends Component {
               </tr>
             </tbody>
           </table>
-        </div>
+       
       </div>
     )
   }
