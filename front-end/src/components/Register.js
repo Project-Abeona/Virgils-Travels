@@ -94,6 +94,9 @@ class Register extends Component {
             </form>
           </div>
         </div>
+        <br/>
+        <br/>
+        <br/>
       </div>
     )
   }
