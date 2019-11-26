@@ -7,8 +7,23 @@ class A11y extends Component {
         <div className="container">
           <br/><br/>
           
-            Write about how we plan on making website accessible and shit. copy it from somewhere idc
-
+          <h1><center>Accessibility</center></h1><br/>
+            <hr></hr>
+            <p>
+              Virgil's Travels strives to improve the usability and Accessibility of its domestic
+              website for all users, including those with disabilities. Virgil's Travels efforts
+              to improve digital usability and accessibility are guided by the relevant portions
+              of the Web Accessibility Guidelines 2.0, Level AA and other existing recommendations
+            </p>
+            <p>
+              Our efforts are ongoing and tested on a periodic basis. If you are a user with a 
+              disability, or an individual assisting a user with a disability, and have difficulty
+              accessing or navigating our digital channel, please contact us at virgilstravelsaccessibility@gmail.com.
+              In your message, please provide your contact information, the web address or other location
+              where you experienced difficulty, and a brief description of the problem you encountered.
+                          
+            </p>
+            
           <br/><br/><br/>
         </div>
 
