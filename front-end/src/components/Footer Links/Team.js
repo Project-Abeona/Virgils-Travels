@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import bryLogo from '../../static/images/rsz_bryr.jpg'
 import davLogo from '../../static/images/rsz_Dave.jpg'
 import vtLogo from '../../static/images/rsz_Logo.jpg'
-import Card from '../../Cards/CardUi'
+import Card from '../Cards/CardUi'
 
 class Team extends Component {
 

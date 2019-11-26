@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import headerLogo from '../static/images/VT_logo.png'
+import '../static/css/Navbar.css'
 
 class Landing extends Component {
   logOut(e) {
@@ -41,7 +42,7 @@ class Landing extends Component {
     )
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark ">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark " id="bg-darker">
       <div className="container">
       <a class="navbar-brand" href="/"><img alt="logo" src={headerLogo} height="70px"></img></a>
         <button

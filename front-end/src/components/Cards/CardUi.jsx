@@ -1,5 +1,5 @@
 import React from 'react';
-import "./card-style.css";
+import "../../static/css/Card-style.css";
 const Card = props =>{
     return(
         <div className="card text-center shadow">
@@ -11,7 +11,7 @@ const Card = props =>{
                 <p className="card-text text-secondary">
                     {props.text}
                 </p>
-                <a href="#" className ="btn btn-outline-success">
+                <a href="mailto:virgilstravels@gmail.com" className ="btn btn-outline-success">
                     {props.emailLink}
                 </a>
             </div>
