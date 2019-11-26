@@ -25,42 +25,49 @@ class Team extends Component {
       
      <div className = "container-fluid d-flex justify-content-center">
           
-      <div className = "row">
-        <div className = "col-md-4">
-          
+      <div className = "row justify-content-md-center">
+        <div className = "col-lg-4">
+        <br/>
           <Card name ="David Ibarra" imgsrc = {davLogo} title = "David Ibarra" 
           text ="Hey my name is David Ibarra and I am a member of Team Late." 
           emailLink = "davidjewnose@gmail.com"/>
         </div>
-        <div className = "col-md-4">
         
-          <Card name ="Bryan Rojas" imgsrc = {bryLogo} title = "Bryan rojas" 
+        <div className = "col-lg-4">
+        <br/>
+          <Card name ="Bryan Rojas" imgsrc = {bryLogo} title = "Bryan Rojas" 
           text ="Hey my name is Bryan Rojas and I am a member of Team Late." 
           emailLink = "BryanRojacs@gmail.com"/>
         </div>
-        <div className = "col-md-4">
-        
+
+        <div className = "col-lg-4">
+        <br/>
           <Card imgsrc = {davLogo} title ="Hector Mendoza" text = "Hey my name is Hector Mendoza and I am a member of Team Late."
           emailLink = "mendozahector555@gmail.com"/>
         </div>
         
-        <div className = "col-md-4">
+        <div className = "col-lg-4">
         <br/>
           <Card imgsrc = {davLogo} title = "Clayton Asada" text = "Hey my name is Clayton Asada and I am a member of Team Late."
           emailLink = "{Add clay's email}"/>
         </div>
-        <div className = "col-md-4">
+
+        <div className = "col-lg-4">
         <br/>
           <Card imgsrc = {vtLogo} title ="Team Late" text = "Everyone here is a part of team late!"
           emailLink = "virgilstravels@gmail.com"/>
-        <br/><br/>
+        
         </div>
-        <div className = "col-md-4">
+
+        <div className = "col-lg-4">
         <br/>
           <Card imgsrc = {davLogo} title = "Brandon Mitchell" text = "Hey my name is Brandon Mitchell and I am a member of Team Late."
           emailLink = "{Add Brandon's email}"/>
+          <br/>
         </div>
+        
       </div>
+
       
       
      </div>
