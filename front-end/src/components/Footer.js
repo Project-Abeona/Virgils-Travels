@@ -4,9 +4,9 @@ import Footer from 'rc-footer'
 import 'rc-footer/assets/index.css'
 import '../static/css/Footer.css'
 
-import fb_icon from '../static/images/facebook.svg'
-import twitter_icon from '../static/images/twitter.svg'
-import instagram_icon from '../static/images/instagram.svg'
+import fb_icon from '../static/images/fb_icon.png'
+import twitter_icon from '../static/images/tw_icon.png'
+import instagram_icon from '../static/images/ig_icon.png'
 
 class FooterArea extends Component {
   render() {
