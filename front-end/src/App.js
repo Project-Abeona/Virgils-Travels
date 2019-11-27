@@ -17,6 +17,7 @@ import Privacy from './components/Footer Links/Privacy'
 import Team from './components/Footer Links/Team'
 import TOS from './components/Footer Links/TOS'
 import FourOhFour from './components/404'
+import Flights from './components/Flights/Flights'
 
 class App extends Component {
   render() {
@@ -38,6 +39,7 @@ class App extends Component {
             <Route exact path="/privacy" component={Privacy} />
             <Route exact path="/team" component={Team} />
             <Route exact path="/tos" component={TOS} />
+            <Route exact path="/flights" component={Flights} />
             <Route path="*" component={FourOhFour} />
             <Redirect from="*" to="/404" />
           </Switch>

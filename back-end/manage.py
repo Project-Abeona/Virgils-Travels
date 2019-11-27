@@ -5,6 +5,7 @@ from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
 from flask_jwt_extended import (create_access_token)
+import requests
 
 app = Flask(__name__)
 
@@ -73,6 +74,22 @@ def getUsers():
     cur.execute("SELECT * FROM users")
     rv = cur.fetchall()
     return jsonify(rv)
+
+@app.route('/flights', methods=['POST'])
+def getFlights():
+    url = "https://apidojo-hipmunk-v1.p.rapidapi.com/flights/create-session"
+
+    querystring = request.get_json()
+    #querystring = {"infants_lap":"0","children":"0","seniors":"0","country":"US","from0":"SGN","to0":"DAD","date0":"Dec 27 2019","pax":"1","cabin":"Coach"}
+
+    headers = {
+    'x-rapidapi-host': "apidojo-hipmunk-v1.p.rapidapi.com",
+    'x-rapidapi-key': "6db41f1109msh16c922befc85d56p13aaa8jsnee5dc6551652"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    return jsonify(response.text)
 	
 if __name__ == '__main__':
     app.run(debug=True)

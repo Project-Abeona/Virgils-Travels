@@ -43,3 +43,25 @@ export const getProfile = user => {
       console.log(err)
     })
 }
+
+export const getFlights = query => {
+  return axios
+    .post('flights', {
+      infants_lap: query.infants_lap,
+      children: query.children,
+      seniors: query.seniors,
+      country: query.country,
+      from0: query.from0,
+      to0: query.to0,
+      date0: query.date0,
+      pax: query.pax,
+      cabin: query.cabin
+    })
+    .then(response => {
+      window.open(JSON.parse(response['data'])['search']['url'])
+      return {'url': JSON.parse(response['data'])['search']['url']}
+    })
+    .catch(err => {
+      console.log(err)
+    })
+}
