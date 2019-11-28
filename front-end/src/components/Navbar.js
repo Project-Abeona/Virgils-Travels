@@ -44,7 +44,7 @@ class Landing extends Component {
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark " id="bg-darker">
       <div className="container">
-      <a class="navbar-brand" href="/"><img alt="logo" src={headerLogo} height="70px"></img></a>
+      <a className="navbar-brand" href="/"><img alt="logo" src={headerLogo} height="70px"></img></a>
         <button
           className="navbar-toggler"
           type="button"
@@ -63,6 +63,17 @@ class Landing extends Component {
               <Link to="/" className="nav-link">
                 Home
               </Link>
+            </li>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Features
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="/flights">Flights</a>
+                <a className="dropdown-item" href="/hotels">Hotels</a>
+                <a className="dropdown-item" href="/events">Events</a>
+                <a className="dropdown-item" href="/food">Food</a>
+              </div>
             </li>
             {localStorage.usertoken ? userLink : loginRegLink}
           </ul>
