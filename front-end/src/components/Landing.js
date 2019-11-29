@@ -6,8 +6,7 @@ var welcome = {
 };
 
 var features = {
-  fontSize: 50,
-  color: 'white' + '!important'
+  fontSize: 50
 };
 
 class Landing extends Component {
@@ -34,7 +33,7 @@ class Landing extends Component {
             </div>
             <div className="col-sm-6 mx-auto">
               <h2 className="text-center" style={features}>
-                <a href="/flights">Hotels</a>
+                <a href="/hotels">Hotels</a>
               </h2>
             </div>
           </div>
@@ -44,12 +43,12 @@ class Landing extends Component {
           <div className="row">
             <div className="col-sm-6 mx-auto">
               <h2 className="text-center" style={features}>
-                <a href="/flights">Events</a>
+                <a href="/events">Events</a>
               </h2>
             </div>
             <div className="col-sm-6 mx-auto">
               <h2 className="text-center" style={features}>
-                <a href="/flights">Food</a>
+                <a href="/food">Food</a>
               </h2>
             </div>
           </div>
