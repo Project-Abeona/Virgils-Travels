@@ -2,7 +2,7 @@
 
 CECS 445 - Traveler's Guide Web App
 
-Created by **Bryan Rojas**, **Hector Mendoza**, **Clay Asad**, **David Ibarra**, **Brandon Mitchell**
+Created by **Bryan Rojas**, **Hector Mendoza**, **Clay Asada**, **David Ibarra**, **Brandon Mitchell**
 
 ## Prerequisites
 
