@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
+import FlightCard from './Landing/FlightCard'
+import HotelCard from './Landing/HotelCard'
+import EventsCard from './Landing/EventsCard'
+import FoodCard from './Landing/FoodCard'
 import '../static/css/Landing.css'
 
 var welcome = {
   fontSize: 50
 };
 
-var features = {
-  fontSize: 50
-};
 
 class Landing extends Component {
   render() {
@@ -24,32 +25,37 @@ class Landing extends Component {
           </div>
 
           <hr/>
-
           <div className="row">
-            <div className="col-sm-6 mx-auto">
-              <h2 className="text-center" style={features}>
-                <a href="/flights">Flights</a>
-              </h2>
+            <div className="col-sm-2">
             </div>
-            <div className="col-sm-6 mx-auto">
-              <h2 className="text-center" style={features}>
-                <a href="/hotels">Hotels</a>
-              </h2>
+            <div className="col-sm-4">
+              <FlightCard/>
+            </div>
+
+            
+            &nbsp;
+            <div className="col-sm-4">
+              <HotelCard/>
+            </div>
+            <div className="col-sm-2">
             </div>
           </div>
 
           <br/>
 
           <div className="row">
-            <div className="col-sm-6 mx-auto">
-              <h2 className="text-center" style={features}>
-                <a href="/events">Events</a>
-              </h2>
+            <div className="col-sm-2">
             </div>
-            <div className="col-sm-6 mx-auto">
-              <h2 className="text-center" style={features}>
-                <a href="/food">Food</a>
-              </h2>
+            <div className="col-sm-4">
+              <EventsCard/>
+            </div>
+
+            
+            &nbsp;
+            <div className="col-sm-4">
+              <FoodCard/>
+            </div>
+            <div className="col-sm-2">
             </div>
           </div>
 

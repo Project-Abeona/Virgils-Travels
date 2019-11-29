@@ -1,6 +1,7 @@
 #landing{
-    background-color: #22b5ef;
+    background-color: #000;
     background-image: url(../images/gym_wallpaper.jpg);
+    background-repeat: no-repeat;
     position: relative;
     background-position: 50% 50%;
     color: white;
