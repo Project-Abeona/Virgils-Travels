@@ -1,0 +1,7 @@
+Flask==1.1.1
+Flask-Cors==3.0.8
+Flask-Bcrypt==0.7.1
+Flask-JWT-Extended==3.21.0
+Flask-MySQLdb==0.2.0
+requests==2.22.0
+./dependencies/mysql_client/mysqlclient-1.4.4-cp37-cp37m-win_amd64.whl
