@@ -143,7 +143,7 @@ class Flights extends Component {
 
                 <form>
                   <center>
-                    <div className="row">
+                    <div className="row" >
                       <Autocomplete
                         onChange={this.handleChangeFrom}
                         id="combo-box-demo"
@@ -266,7 +266,7 @@ class Flights extends Component {
                 <br/>
                 <center>
                   <Button onClick={this.onSubmit} variant="contained" color="primary">
-                    Search Flights <span role="img" aria-label="Airplane">✈️</span>
+                    Search Flights &nbsp;<span role="img" aria-label="Airplane">✈️</span>
                   </Button>
                 </center> 
                 <br/>
