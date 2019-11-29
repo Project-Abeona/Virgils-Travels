@@ -19,6 +19,8 @@ import TOS from './components/Footer Links/TOS'
 import FourOhFour from './components/404'
 import Flights from './components/Flights/Flights'
 import Hotels from './components/Hotels/Hotels'
+import Food from './components/Food/Food'
+import Events from './components/Events/Events'
 
 class App extends Component {
   render() {
@@ -42,6 +44,8 @@ class App extends Component {
             <Route exact path="/tos" component={TOS} />
             <Route exact path="/flights" component={Flights} />
             <Route exact path="/hotels" component={Hotels} />
+            <Route exact path="/food" component={Food} />
+            <Route exact path="/events" component={Events} />
             <Route path="*" component={FourOhFour} />
             <Redirect from="*" to="/404" />
           </Switch>
