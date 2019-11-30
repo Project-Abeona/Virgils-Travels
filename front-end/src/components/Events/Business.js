@@ -25,7 +25,7 @@ class Business extends React.Component {
                 <br/>
                 <center>
                     <img
-                        src={this.props.business.imageSrc}
+                        src={this.props.business.image_url}
                         alt={this.props.business.name}
                         height="200px"
                     />
@@ -33,16 +33,12 @@ class Business extends React.Component {
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                     <center>
-                        <a href={this.props.business.url} style={{color: '#333333'}}>{this.props.business.name}</a>
+                        <a href={this.props.business.event_site_url} style={{color: '#333333'}}>{this.props.business.name}</a>
                     </center>
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                 <center>
                     <p>{this.props.business.address}<br/>
-                  {this.props.business.city}<br/>
-                  {`${this.props.business.state} ${this.props.business.zipCode}`}<br/>
-                  
-                  <strong>{`${this.props.business.rating} stars`}</strong>
                   </p>
                 </center>
                 </Typography>

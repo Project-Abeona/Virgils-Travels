@@ -4,8 +4,12 @@ const apiKey =
   //LcVvF_Xoe2QmAFH5FELYuVUFcbYcoM5E0obqonmxE3bwOzliYVUThNp1ttFlEK5VlSKwftemDoAUzik3zxgslj1HiKAx7kvr0JSbQBQS0IZNZQHSHzQ6BelsmNLhXXYx
   const Yelp = {
     async search(term, location, sortBy ) {
+        const e_rep = await fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/events?location=${location}`, { headers: { Authorization: `Bearer ${apiKey}` } });
+        console.log(e_rep.json());
+
         const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, { headers: { Authorization: `Bearer ${apiKey}` } });
           const jsonResponse = await response.json();
+          console.log(jsonResponse)
           if (jsonResponse.businesses) {
               return jsonResponse.businesses.map(business => {
                   return {
@@ -18,7 +22,8 @@ const apiKey =
                       zipCode: business.location.zip_code,
                       category: business.categories[0].title,
                       rating: business.rating,
-                      reviewCount: business.review_count
+                      reviewCount: business.review_count,
+                      url: business.url
                   };
               });
           }
