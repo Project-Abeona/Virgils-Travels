@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import bryLogo from '../../static/images/rsz_bryr.jpg'
 import davLogo from '../../static/images/rsz_Dave.jpg'
 import vtLogo from '../../static/images/rsz_Logo.jpg'
+import clay from '../../static/images/rsz_Clay.jpg'
+import Hector from '../../static/images/rsz_Hector.jpg'
+import Brandon from '../../static/images/rsz_Brandon.jpg'
 import Card from '../Cards/CardUi'
 
 class Team extends Component {
@@ -14,13 +17,13 @@ class Team extends Component {
       
       <br/>
       <hr/>
-      <h4>
+      <h5>
         <center>Our team was assembled in our CECS 445 class taught by professor Hubert Huynh.
           We are all seniors at California State University Long Beach and this is our website.
           We hope you stick with us as we continue to develop our site!
         </center>
 
-      </h4>
+      </h5>
       <hr/>
       
      <div className = "container-fluid d-flex justify-content-center">
@@ -42,27 +45,27 @@ class Team extends Component {
 
         <div className = "col-lg-4">
         <br/>
-          <Card imgsrc = {davLogo} title ="Hector Mendoza" text = "Hey my name is Hector Mendoza and I am a member of Team Late."
+          <Card imgsrc = {Hector} title ="Hector Mendoza" text = "Hey my name is Hector Mendoza and I am a member of Team Late."
           emailLink = "mendozahector555@gmail.com"/>
         </div>
         
         <div className = "col-lg-4">
         <br/>
-          <Card imgsrc = {davLogo} title = "Clayton Asada" text = "Hey my name is Clayton Asada and I am a member of Team Late."
-          emailLink = "{Add clay's email}"/>
+          <Card imgsrc = {clay} title = "Clayton Asada" text = "Hey my name is Clayton Asada and I am a member of Team Late."
+          emailLink = "casada94@gmail.com"/>
         </div>
 
         <div className = "col-lg-4">
         <br/>
-          <Card imgsrc = {vtLogo} title ="Team Late" text = "Everyone here is a part of team late!"
+          <Card imgsrc = {vtLogo} title ="Team Late" text = "Everyone here is a part of the team! We all worked on this site together!"
           emailLink = "virgilstravels@gmail.com"/>
         
         </div>
 
         <div className = "col-lg-4">
         <br/>
-          <Card imgsrc = {davLogo} title = "Brandon Mitchell" text = "Hey my name is Brandon Mitchell and I am a member of Team Late."
-          emailLink = "{Add Brandon's email}"/>
+          <Card imgsrc = {Brandon} title = "Brandon Mitchell" text = "Hey my name is Brandon Mitchell and I am a member of Team Late."
+          emailLink = "brandonslist@yahoo.com"/>
           <br/>
         </div>
         

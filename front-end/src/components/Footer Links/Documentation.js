@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+//import doc from '../../static/documents/rsz_Brandon.jpg'
 
 class Docu extends Component {
   render() {
@@ -6,14 +7,19 @@ class Docu extends Component {
 
         <div className="container">
           <br/><br/>
-          
-            Okay so for this part just link each individual document. might be tricky bc you need to know a little javascript
+          <h1><center>Documentation</center></h1>
+          <hr/>
+          <p>
+            Welcome to our documentation page. In this page we have all of our technical documents that include
+            our ideas, process, planning, and our time spent on the creation of every item in relating to the 
+            website. If you wish to view the items, take a look below!
+          </p>
+          <br/>
+          <p>
+            lorenipsum
+          </p>
 
-            okay so basically create links that will open up documents from the document folder so that hubert can see the docs we turn in
-
-            let me know if you need help, if you cant do it, just create links linking to google or some shit and i do the actual linking to the doc
-
-            '../static/documents/testdoc.pdf' 
+            
 
           <br/><br/><br/>
         </div>
