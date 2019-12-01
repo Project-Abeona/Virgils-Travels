@@ -17,13 +17,13 @@ class Team extends Component {
       
       <br/>
       <hr/>
-      <h4>
+      <h5>
         <center>Our team was assembled in our CECS 445 class taught by professor Hubert Huynh.
           We are all seniors at California State University Long Beach and this is our website.
           We hope you stick with us as we continue to develop our site!
         </center>
 
-      </h4>
+      </h5>
       <hr/>
       
      <div className = "container-fluid d-flex justify-content-center">
@@ -65,7 +65,7 @@ class Team extends Component {
         <div className = "col-lg-4">
         <br/>
           <Card imgsrc = {Brandon} title = "Brandon Mitchell" text = "Hey my name is Brandon Mitchell and I am a member of Team Late."
-          emailLink = "{Add Brandon's email}"/>
+          emailLink = "brandonslist@yahoo.com"/>
           <br/>
         </div>
         

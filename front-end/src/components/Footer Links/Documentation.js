@@ -12,9 +12,13 @@ class Docu extends Component {
           <p>
             Welcome to our documentation page. In this page we have all of our technical documents that include
             our ideas, process, planning, and our time spent on the creation of every item in relating to the 
-            website. If you wish to view the items, take a look below:
+            website. If you wish to view the items, take a look below!
           </p>
-          
+          <br/>
+          <p>
+            lorenipsum
+          </p>
+
             
 
           <br/><br/><br/>
