@@ -57,7 +57,7 @@ class Team extends Component {
 
         <div className = "col-lg-4">
         <br/>
-          <Card imgsrc = {vtLogo} title ="Team Late" text = "Everyone here is a part of the team. We all worked on this site together!"
+          <Card imgsrc = {vtLogo} title ="Team Late" text = "Everyone here is a part of the team! We all worked on this site together!"
           emailLink = "virgilstravels@gmail.com"/>
         
         </div>
