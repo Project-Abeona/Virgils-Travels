@@ -1,11 +1,21 @@
-import React, { Component } from 'react'
-//import doc from '../../static/documents/rsz_Brandon.jpg'
+import React, { Component, PureComponent } from 'react'
+import pdf from '../../static/documents/Sprints.pdf'
+
+
+
 
 class Docu extends Component {
-  render() {
-    return (
+  
 
+  render() {
+    
+    return (
+      
+        
+      
+          
         <div className="container">
+          
           <br/><br/>
           <h1><center>Documentation</center></h1>
           <hr/>
@@ -15,17 +25,23 @@ class Docu extends Component {
             website. If you wish to view the items, take a look below!
           </p>
           <br/>
-          <p>
-            lorenipsum
-          </p>
+          <hr/>
+          <h3>Click Below for deliverables.</h3>
+          <hr/>
+          <a href={pdf} >Documentation PDF</a>
+          
 
-            
+          
 
-          <br/><br/><br/>
+          
+          <br/><br/><br/><br/><br/><br/>
         </div>
-
+        
+        
+        
+       
     )
   }
 }
 
-export default Docu
+export default Docu 
