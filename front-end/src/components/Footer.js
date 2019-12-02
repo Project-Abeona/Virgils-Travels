@@ -96,7 +96,7 @@ class FooterArea extends Component {
                 ]
             }
         ]}
-        bottom='🛫 Created by Team Late 🛬'
+        bottom='❤️ Created by Team UTI ✈️'
         backgroundColor='#131313 !important'
         ></Footer>
     )
