@@ -32,26 +32,26 @@ class Team extends Component {
         <div className = "col-lg-4">
         <br/>
           <Card name ="David Ibarra" imgsrc = {davLogo} title = "David Ibarra" 
-          text ="Hey my name is David Ibarra and I am a member of Team Late." 
+          text ="Hey my name is David Ibarra and I am a member of Team UTI." 
           emailLink = "davidjewnose@gmail.com"/>
         </div>
         
         <div className = "col-lg-4">
         <br/>
           <Card name ="Bryan Rojas" imgsrc = {bryLogo} title = "Bryan Rojas" 
-          text ="Hey my name is Bryan Rojas and I am a member of Team Late." 
+          text ="Hey my name is Bryan Rojas and I am a member of Team UTI." 
           emailLink = "BryanRojacs@gmail.com"/>
         </div>
 
         <div className = "col-lg-4">
         <br/>
-          <Card imgsrc = {Hector} title ="Hector Mendoza" text = "Hey my name is Hector Mendoza and I am a member of Team Late."
+          <Card imgsrc = {Hector} title ="Hector Mendoza" text = "Hey my name is Hector Mendoza and I am a member of Team UTI."
           emailLink = "mendozahector555@gmail.com"/>
         </div>
         
         <div className = "col-lg-4">
         <br/>
-          <Card imgsrc = {clay} title = "Clayton Asada" text = "Hey my name is Clayton Asada and I am a member of Team Late."
+          <Card imgsrc = {clay} title = "Clayton Asada" text = "Hey my name is Clayton Asada and I am a member of Team UTI."
           emailLink = "casada94@gmail.com"/>
         </div>
 
@@ -64,7 +64,7 @@ class Team extends Component {
 
         <div className = "col-lg-4">
         <br/>
-          <Card imgsrc = {Brandon} title = "Brandon Mitchell" text = "Hey my name is Brandon Mitchell and I am a member of Team Late."
+          <Card imgsrc = {Brandon} title = "Brandon Mitchell" text = "Hey my name is Brandon Mitchell and I am a member of Team UTI."
           emailLink = "brandonslist@yahoo.com"/>
           <br/>
         </div>
